@@ -1,0 +1,57 @@
+{% extends 'dummy.html' %}
+{% load static %}
+{%  block title %}
+<title>Registration Page</title>
+{% endblock %}
+    
+
+{% block body_block %}
+<style>
+    body {
+        background-image:url('https://image.shutterstock.com/image-vector/abstract-mesh-background-lines-vector-260nw-185065568.jpg');
+        background-size: cover;
+    }
+    </style>
+
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Sign in</h3>
+              <form action="" method="post"></form>
+        <div class="one">
+            <form action=""method="POST" enctype="multipart/form-data">
+                <div class="div">
+                {% csrf_token %}
+                <table>
+                    <fieldset>
+                <tr>
+                    <td>{{usfo}}</td>
+                </tr>
+                <tr>
+                    <td>{{pfo}}</td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        <a href="{% url 'home' %}">
+                        <button type="submit" class="btn btn-warning">Register</button></a>
+                    </td>
+                </tr>
+                </table>
+                </div>
+            </form>
+        </div>
+           </div>
+        </div>
+        </div>
+    </div>
+    </div>
+  </section>
+ {% endblock %}
+    
+            

@@ -1,0 +1,59 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>contact</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+  body
+  {
+      background-image: url('data:image/jpeg;base64,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');
+      background-size: cover;
+  }
+  </style>   sss
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-right h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <h3 class="mb-5">Contact</h3>   
+            
+                    
+                        <div class="place">
+                            <span class="fas fa-map-marker-alt"></span>
+                            <span class="text">Bangalore</span>
+                        </div>
+                        <div class="phone">
+                            <span class="fas fa-phone-alt"></span>
+                            <span class="text">+91 9121370794</span>
+                        </div>
+                        <div class="email">
+                            <span class="fas fa-envelope"></span>
+                            <span class="text">support@Maidservice.in</span>
+                        </div>
+
+                    <h2>Contact us</h2>
+                        <form action="#">
+                            <div class="email">
+                                <div class="text">Email </div>
+                                <input type="email" required>
+                            </div>
+                            <div class="msg">
+                                <div class="text">Message</div>
+                                <textarea rows="2" cols="25" required></textarea>
+                            </div>
+                            <div>
+                            <a href="{% url 'home' %}">
+                                <button type="submit" class="btn btn-warning">Send</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+{% endblock %}

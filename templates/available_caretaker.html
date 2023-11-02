@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Care Takers</title>
+</head>
+<body>
+    {% if available_caretaker %}
+    <h1>Available Care Takers:</h1>
+    <ul>
+        {% for caretaker in available_caretaker %}
+        <li>{{ caretaker.name }} (Rating: {{ caretaker.rating }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Sorry no Caretaker available.</p>
+    {% endif %}
+</body>
+</html>

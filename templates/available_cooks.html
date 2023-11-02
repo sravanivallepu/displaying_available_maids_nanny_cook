@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Cooks</title>
+</head>
+<body>
+    {% if available_cooks %}
+    <h1>Available Cooks:</h1>
+    <ul>
+        {% for cook in available_cooks %}
+        <li>{{ cook.name }} (Rating: {{ cook.rating }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Sorry no cook available.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Maids</title>
+</head>
+<body>
+
+    <h2>Available Maids:</h2>
+    <ul>
+        {% for maid in available_maids %}
+        <li>{{ maid.name }}<br>
+            Rating: {{ maid.rating }}</li>
+        {% empty %}
+        <li>NO maids are avaliable</li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

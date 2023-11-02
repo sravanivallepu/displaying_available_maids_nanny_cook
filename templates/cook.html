@@ -1,0 +1,137 @@
+{% extends 'dummy.html' %}
+{% load static %}
+{%  block title %}
+<title>cook Page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+<h2>Cook Request</h2>
+   <form method="POST" action="{% url 'available_cooks' %}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><label for="vsn">Society Name:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="s" id="vsn" style="width:440px; height: 30px;">
+                    <option value="Society">Select Society</option>
+                    <option value="Society">Society1</option>
+                    <option value="Society">Society2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nvn">Preferred Gender:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="g" id="g" style="width:440px; height: 30px;">
+                    <option value="Society">male</option>
+                    <option value="Society">Female</option>
+                    <option value="Society">Others</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nvn">Name:</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="vsn"></td>
+        </tr>
+        <tr>
+            <td><label for="Number">Contact Number:</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number"  id="Number"></td>
+        </tr>
+        <tr>
+            <td><label for="se">Service Name:</label></td>
+        </tr>
+        <tr>
+        <td>
+            <input type="text" name="se" id="se">
+        </td>
+        </tr>
+        <tr>
+            <td><label for="Number">Preferred Timings:</label></td>
+        </tr>
+        <tr>
+            <td><input type="time" name="sti" id="sti"></td>
+            <td><p style="text-align: center;">to</p></td>
+            <td><input type="time" name="eti" id="eti"></td>
+        </tr>
+        <tr>
+            <th>Add Ons:</th>
+        </tr>
+        <tr>
+            <td><input type="radio" name="nn" id="nn" style="position: relative;right: 220px;"></td>
+        </tr>
+        <tr>
+            <td><label for="nn">Include Dish-Washing</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="nn" id="nn" style="position: relative;right: 220px;"></td>
+        </tr>
+        <tr>
+            <td><label for="nn">Not Include Dish-Washing</label></td>
+        </tr>
+       
+    
+        <tr>
+            <td><label for="Number">For How Many People?:</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number" name="pp" id="Number"></td>
+        </tr>
+        <tr>
+            <td><label for="Number">How Many Meals Per Day?:</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number" name="mm" id="Number"></td>
+        </tr>
+        <tr>
+            <td><label for="nvn">Veg/Non Veg:</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="vsn" id="vsn"></td>
+        </tr>
+        <tr>
+            <td><label for="vsn">Cooking Speciality:</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="cs" id="vsn"></td>
+        </tr>
+        <tr>
+            <td><label for="vsn">Additional Requirements</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="ar" id="vsn"></td>
+        </tr>
+        <tr>
+            <th>
+                <input type="submit" value="Submit Request" class="btn btn-success"></th>
+
+            </th>
+        </tr>
+        
+
+        
+    </table>
+   </form>
+   </center>
+   <style>
+    form
+    {
+        background-color:ghostwhite;
+        width: 1000px;
+    }
+    input
+    {
+        width:450px;
+    }
+   </style>
+
+{% endblock %}
+ 

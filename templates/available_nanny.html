@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Nannys</title>
+</head>
+<body>
+    {% if available_nanny %}
+    <h1>Available Nanny:</h1>
+    <ul>
+        {% for nanny in available_nanny %}
+        <li>{{ nanny.name }} (Rating: {{ nanny.rating }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Sorry no nanny available.</p>
+    {% endif %}
+</body>
+</html>

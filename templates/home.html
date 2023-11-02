@@ -1,0 +1,104 @@
+{% extends 'dummy.html' %}
+{% load static %}
+{%  block title %}
+<title>Home Page</title>
+{% endblock %}
+
+{% block body_block %}
+
+<div class="kanna">
+    <a href="{% url 'nanny' %}"><i class="btn btn-info">𝐁𝐨𝐨𝐤 𝐚 𝐍𝐚𝐧𝐧𝐲</i></a>
+    <a href="{% url 'maid' %}"><i class="btn btn-info">𝐁𝐨𝐨𝐤 𝐚 𝐌𝐚𝐢𝐝</i></a>
+    <a href="{% url 'cook' %}"><i class="btn btn-info">𝐁𝐨𝐨𝐤 𝐚 𝐜𝐨𝐨𝐤</i></a>
+    <a href="{% url 'care_taker' %}"><i class="btn btn-info">Care Taker</i></a>
+            
+</div>
+<div class="srav">
+    <h3 style="margin-left: 15px;">𝐖𝐞 𝐀𝐫𝐞 𝐓𝐡𝐞 𝐁𝐞𝐬𝐭 𝐇𝐨𝐦𝐞</h3>
+   <h3> 𝐒𝐞𝐫𝐯𝐢𝐜𝐞 𝐅𝐨𝐫 𝐌𝐚𝐤𝐢𝐧𝐠 𝐘𝐨𝐮𝐫</h3>
+     <h3 style="text-align: center;">𝐇𝐨𝐦𝐞 𝐒𝐡𝐢𝐧𝐞</h3>
+ 
+ </div>
+ <div class="neeru">
+     <h3 style="color: red; text-align: center;">𝘼𝙡𝙡 𝙎𝙚𝙧𝙫𝙞𝙘𝙚𝙨</h3>
+ </div>
+ <div class="sn">
+ <div id="sravs">
+     <table>
+     <tr>
+        <td> <a href=""><img src="https://www.bookmybai.com/images/icon1.png" alt="" style="height: 180px; width: 300px;"></a></td>
+        <td> <a href=""><img src="https://www.bookmybai.com/images/icon2.png" alt="" style="height: 180px; width: 300px;"></a></td>
+        <td> <a href=""><img src="https://www.bookmybai.com/images/icon3.png" alt="" style="height: 180px; width: 300px;"></a></td>
+        <td> <a href=""><img src="https://www.bookmybai.com/images/icon4.png" alt="" style="height: 180px; width: 300px;"></a></td>
+    </tr>
+    </table>
+ </div>
+</div>
+
+
+ <style>
+    .srav
+{
+    background-color: ghostwhite;
+    border-radius:45px;
+    height: 120px;
+    width: 350px;
+    position: relative;
+    top:350px;
+    left: 600px;
+    color: black;
+}
+.neeru
+{
+    background-color: ghostwhite;
+    height:60px;
+    width: 100%;
+    color: black;
+    position: relative;
+    top: 470px;
+    
+}
+body
+{
+    background-image: url('https://img.freepik.com/free-vector/cleaning-team-with-brooms-vacuum-cleaner-man-woman-uniform-with-professional-equipment-ready-work-together-flat-vector-illustration-cleaning-service-teamwork-occupation-concept_74855-24396.jpg?w=2000');
+    background-size: cover;
+}
+#sravs{
+      
+      color: white;
+      text-shadow: 0 0 15px red; 
+    
+  }
+  td{
+      
+      padding: 5px;
+      border-radius:45px;
+  }
+  img:hover
+  {
+    transform: scale(1.1);
+  }
+  .sn
+  {
+    position: relative;
+    top: 450px;
+    background:linear-gradient(45deg,rgb(156, 220, 241),ghostwhite);
+  }
+  .kanna
+  {
+
+    
+    justify-content: space-around;
+    margin-left: 470px;
+    position: relative;
+    top:40px;
+    font-size: 35px;
+   
+  }
+
+ </style>
+   
+
+
+
+{% endblock %}

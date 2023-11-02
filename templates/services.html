@@ -1,0 +1,38 @@
+{% extends 'dummy.html' %}
+{% load static %}
+{%  block title %}
+<title>services</title>
+{% endblock %}
+
+
+
+{% block body_block %}
+<style>
+    body {
+        background-image:url('https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?size=626&ext=jpg&ga=GA1.1.550838489.1692723871&semt=sph');
+        background-size: cover;
+        
+    }
+    </style>
+<center>
+<h1>Service Details</h1>  
+<form method="POST" >
+     {% csrf_token %}
+    
+        <table>
+            <tr>
+                {{SFO.as_p}}
+            </tr>
+            <h1 style="text-align: center; position: relative;bottom: 550px;">Service Details</h1>
+   
+    
+            <br>
+            <br>
+            <td><a href="{% url 'home' %}"><button class="btn btn-danger" >SUBMIT</button></a></td>
+        <td><button  class="btn btn-danger">RESET</button></td>
+    </table>
+</form>
+</center> 
+               
+
+{% endblock %}

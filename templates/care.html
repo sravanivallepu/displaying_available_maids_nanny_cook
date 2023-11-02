@@ -1,0 +1,103 @@
+{% extends 'dummy.html' %}
+{% load static %}
+{%  block title %}
+<title>care taker Page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+<h2>Care Taker Request</h2>
+   <form method="POST" action="{% url 'available_caretaker' %}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><label for="vsn">Society Name:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="s" id="vsn" style="width:440px; height: 30px;">
+                    <option value="Society">Select Society</option>
+                    <option value="Society">Society1</option>
+                    <option value="Society">Society2</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="vsn">Preferred Gender:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="g" id="g" style="width:440px; height: 30px;">
+                    <option value="Society">male</option>
+                    <option value="Society">Female</option>
+                    <option value="Society">Others</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="vsn">Name:</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="vsn"></td>
+        </tr>
+        <tr>
+            <td><label for="Number">Contact Number:</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number"  id="Number"></td>
+        </tr>
+        <tr>
+            <td><label for="se">Service Name:</label></td>
+        </tr>
+        <tr>
+        <td>
+            <input type="text" name="se" id="se">
+        </td>
+        <tr>
+            <td><label for="Number">Number of Children(>2yrs):</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number"  id="Number" placeholder="0"></td>
+        </tr>
+        <tr>
+            <td><label for="Number">Number of old people:</label></td>
+        </tr>
+        <tr>
+            <td><input  type="number"  id="Number" placeholder="0"></td>
+        </tr>
+        <tr>
+            <td><label for="Number">Preferred Timings:</label></td>
+        </tr>
+        <tr>
+            <td><input type="time" name="sti" id="sti"></td>
+            <td><p style="text-align: center;">to</p></td>
+            <td><input type="time" name="eti" id="eti"></td>
+        </tr>
+        <tr>
+            <td><label for="">Additional Requirements:</label></td>
+        </tr>
+        <tr>
+            <td><input type="tel"  id="Number" style="height:100px;"></td>
+        </tr>
+        <tr>
+           <th> <input type="submit" value="Submit Request" class="btn btn-success"></th>
+        </tr>
+
+        
+    </table>
+   </form>
+   </center>
+   <style>
+    form
+    {
+        background-color:ghostwhite;
+        width: 1000px;
+    }
+    input
+    {
+        width:450px;
+    }
+   </style>
+
+{% endblock %}
+ 

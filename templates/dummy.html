@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+rel="stylesheet"
+/>
+<style>
+
+
+
+a
+{
+    color:black;
+   padding: 25px;
+
+}
+.vsn
+{
+    display: flex;
+    margin-left: 690px;
+    margin-top: -60px;
+}
+
+
+</style>
+
+</head>
+<body>
+    <h3 style="color: black;">𝐎𝐧𝐥𝐢𝐧𝐞 𝐌𝐚𝐢𝐝 𝐁𝐨𝐨𝐤𝐢𝐧𝐠</h3>
+        <a href="{% url 'home' %}"><i class="fas fa-home">𝐇𝐨𝐦𝐞</i></a>
+            <a href="{% url 'About' %}"><i class="fas fa-info-circle">𝐀𝐛𝐨𝐮𝐭</i></a>
+            <a href="{% url 'booking' %}"><i class="fas fa-phone">𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬</i></a>
+            <a href="{% url 'Contact' %}"><i class="fas fa-book-open">𝐂𝐨𝐧𝐭𝐚𝐜𝐭</i></a>
+            <a href=""><i class="fa-brands fa-google">𝐒𝐞𝐚𝐫𝐜𝐡 𝐌𝐚𝐢𝐝</i></a>
+        </div>
+        <nav class="nav" style="background-color:rgb(234, 186, 231)">
+        <a href="{% url 'admin:index' %}" class="nav-link text-white">Admin-Page</a>
+        <a href="{% url 'registration' %}" class="nav-link text-white">Registration</a>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'display_profile' %}" class="nav-link text-white">Display_profile</a>
+            <a href="{% url 'change_password' %}" class="nav-link text-white">Change_password</a>
+            <a href="{% url 'user_logout' %}" class="nav-link text-white">User_logout</a>
+
+        {% else %} 
+            <a href="{% url 'user_login' %}" class="nav-link text-white">User_login</a>
+            <a href="{% url 'forgot_password' %}" class="nav-link text-white">Forgot_password</a>
+
+
+        {% endif %}
+        </nav>
+    
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+{% block body_block %}
+{% endblock %}
+</body>
+</html>
