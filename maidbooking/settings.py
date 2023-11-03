@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)5+)a&1r8&di+1!w3=hq&ot7c0d^5ithzkb*g6l7&mb8u_m!km
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -134,3 +134,16 @@ EMAIL_HOST_PASSWORD='mfmhzysqporbzawq'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_PORT=587
+
+
+import pyodbc
+
+SERVER = 'maidsqlppserver.database.windows.net'
+DATABASE = 'miadsqlpp'
+USERNAME = 'ysadmin'
+PASSWORD = 'yellowsense@1234'
+connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}'
+conn = pyodbc.connect(connectionString)
+cursor =conn.cursor()
+
+
